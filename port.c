@@ -226,7 +226,16 @@ int ft_write(struct ftdi_info* ftdi, unsigned char* buffer, int size)
 	else
 		return status;
 #else
-	return ftdi_write_data(ftdi->ftdi, (const unsigned char*)buffer, size);
+//Saka: 
+	printf("Writing I2C\n");
+	int result = ftdi_write_data(ftdi->ftdi, (const unsigned char*)buffer, size);
+	for (int i=0; i<size; i++)
+	{
+		printf("byte %d = 0x%02X\n", i, buffer[i]);
+	}
+
+	return result;
+	//return ftdi_write_data(ftdi->ftdi, (const unsigned char*)buffer, size);
 #endif
 }
 
@@ -240,7 +249,16 @@ int ft_read(struct ftdi_info* ftdi, unsigned char* buffer, int size)
 	else
 		return status;
 #else
-	return ftdi_read_data(ftdi->ftdi, (unsigned char*)buffer, size);
+//Saka:
+	printf("Reading I2C\n");
+	int result = ftdi_read_data(ftdi->ftdi, (unsigned char*)buffer, size); 
+	for (int i=0; i<size; i++)
+	{
+		printf("byte %d = 0x%02X\n", i, buffer[i]);
+	}
+
+	return result;
+	//return ftdi_read_data(ftdi->ftdi, (unsigned char*)buffer, size);
 #endif
 }
 

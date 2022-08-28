@@ -429,6 +429,7 @@ struct board_links imx8mpevk_board_links[] = {
 #define IMX8ULPEVK_POWER_SWITCH_PATH(group, sensor1, addr, rsense1, sensor2, rsense2) "/ft4232h_i2c{channel=1;dir_bitmask=0xF0;val_bitmask=0xF0}/pac1934{group="#group";sensor="#sensor1";addr="#addr";rsense1="#rsense1";sensor2="#sensor2";rsense2="#rsense2"}"
 #define IMX8ULPEVK_POWER_PATH(group, sensor, addr, rsense1, rsense2) "/ft4232h_i2c{channel=1;dir_bitmask=0xF0;val_bitmask=0xF0}/pac1934{group="#group";sensor="#sensor";addr="#addr";rsense1="#rsense1";rsense2="#rsense2"}"
 #define IMX8ULPEVK_GPIO_EXTENDER_PATH "/ft4232h_i2c{channel=1;dir_bitmask=0xF0;val_bitmask=0xF0}"
+
 struct mapping imx8ulpevkb2_board[] = {
 	{"buck4_cpu_1v1", power, IMX8ULPEVK_POWER_PATH(1, 1, 0x10, 2000, 2000), 0x00},
 	{"buck1_cpu_1v8", power, IMX8ULPEVK_POWER_SWITCH_PATH(1, 3, 0x10, 100, 4, 10000), 0x00},
@@ -471,6 +472,44 @@ struct mapping imx8ulpevkb2_board[] = {
 
 	{NULL, 0, NULL, 0} //null terminated
 };
+
+//Saka: Adding MaaXBoard 8ULP
+struct mapping maaxboard8ulp_board[] = {
+	{"buck4_cpu_1v1", power, IMX8ULPEVK_POWER_PATH(1, 1, 0x10, 400, 400), 0x00},
+	{"buck1_cpu_1v8", power, IMX8ULPEVK_POWER_SWITCH_PATH(1, 3, 0x10, 100, 4, 10000), 0x00},
+	{"buck2_cpu_1v0", power, IMX8ULPEVK_POWER_SWITCH_PATH(2, 1, 0x11, 50, 2, 10000), 0x00},
+	{"buck3_cpu_1v0", power, IMX8ULPEVK_POWER_SWITCH_PATH(2, 3, 0x11, 20, 4, 10000), 0x00},
+	{"ldo5_cpu_3v0", power, IMX8ULPEVK_POWER_PATH(3, 1, 0x12, 250000, 250000), 0x00},
+	{"ldo1_cpu_1v1", power, IMX8ULPEVK_POWER_PATH(3, 2, 0x12, 100, 100), 0x00},
+	{"buck1_lsw1_cpu_1v8", power, IMX8ULPEVK_POWER_PATH(3, 3, 0x12, 100, 100), 0x00},
+	{"buck1_lsw4_cpu_1v8", power, IMX8ULPEVK_POWER_PATH(3, 4, 0x12, 100, 100), 0x00},
+	{"buck1_lsw2_cpu_1v8", power, IMX8ULPEVK_POWER_PATH(4, 1, 0x13, 100, 100), 0x00},
+	{"buck1_lsw3_cpu_1v8", power, IMX8ULPEVK_POWER_PATH(4, 2, 0x13, 100, 100), 0x00},
+	{"ldo4_cpu_1v8", power, IMX8ULPEVK_POWER_PATH(4, 3, 0x13, 100, 100), 0x00},
+	{"ldo2_cpu_3v3", power, IMX8ULPEVK_POWER_PATH(4, 4, 0x13, 100, 100), 0x00},
+	{"vsys_5v0_4v2", power, IMX8ULPEVK_POWER_SWITCH_PATH(5, 1, 0x14, 20, 2, 10000), 0x00},
+	{"ldo1_cpu_1v1_0v6", power, IMX8ULPEVK_POWER_PATH(5, 3, 0x14, 50, 50), 0x00},
+	{"buck4_dram_1v1", power, IMX8ULPEVK_POWER_PATH(5, 4, 0x14, 50, 50), 0x00},
+
+	{"boot_mode", gpio, IMX8ULPEVK_GPIO_EXTENDER_PATH"/pca6416a{addr=0x20;port=0;pin_bitmask=0xC0;opendrain=0;}", 0x30},
+	{"boot_cfg0", gpio, IMX8ULPEVK_GPIO_EXTENDER_PATH"/pca6416a{addr=0x20;port=0;pin_bitmask=0x3F;opendrain=0;}", 0x00},
+	{"remote_en", gpio, IMX8ULPEVK_GPIO_EXTENDER_PATH"/pca6416a{addr=0x20;port=1;pin_bitmask=0x01;opendrain=0;}", 0x41},
+	{"reset", gpio, IMX8ULPEVK_GPIO_EXTENDER_PATH"/pca6416a{addr=0x20;port=1;pin_bitmask=0x02;opendrain=0;}", 0x10},
+	{"onoff", gpio, IMX8ULPEVK_GPIO_EXTENDER_PATH"/pca6416a{addr=0x20;port=1;pin_bitmask=0x04;opendrain=0;}", 0x20},
+	{"reset0_b", gpio, IMX8ULPEVK_GPIO_EXTENDER_PATH"/pca6416a{addr=0x20;port=1;pin_bitmask=0x08;opendrain=0;}", 0x00},
+	{"reset1_b", gpio, IMX8ULPEVK_GPIO_EXTENDER_PATH"/pca6416a{addr=0x20;port=1;pin_bitmask=0x10;opendrain=0;}", 0x00},
+	{"cpu_power_mode0", gpio, IMX8ULPEVK_GPIO_EXTENDER_PATH"/pca6416a{addr=0x20;port=1;pin_bitmask=0x20;opendrain=0;}", 0x00},
+	{"cpu_power_mode1", gpio, IMX8ULPEVK_GPIO_EXTENDER_PATH"/pca6416a{addr=0x20;port=1;pin_bitmask=0x40;opendrain=0;}", 0x00},
+	{"cpu_power_mode2", gpio, IMX8ULPEVK_GPIO_EXTENDER_PATH"/pca6416a{addr=0x20;port=1;pin_bitmask=0x80;opendrain=0;}", 0x00},
+
+	{"ft_int_b", gpio, "/ft4232h_gpio{channel=1;pin_bitmask=0x08}", 0x00},
+	{"ft_reset_boot_mode", gpio, "/ft4232h_gpio{channel=1;pin_bitmask=0x10}", 0x00},
+
+	{"93lcx6", ftdi_eeprom, "/ft4232h_eeprom{uasize=0xFF}", 0x00},
+
+	{NULL, 0, NULL, 0} //null terminated
+};
+//Saka: End
 
 struct mapping imx8ulpevk_board[] = {
 	{"buck4_cpu_1v1", power, IMX8ULPEVK_POWER_PATH(1, 1, 0x10, 400, 400), 0x00},
@@ -593,6 +632,34 @@ struct mapping imx8ulpwatchval_board[] = {
 
 	{NULL, 0, NULL, 0} //null terminated
 };
+
+//Saka: Adding MaaXBoard 8ULP
+struct boot_mode maaxboard8ulp_board_boot_modes[] = {
+	{"fuse",	0x00},
+	{"usb",		0x01},
+	{"emmc_s",	0x02},
+	{"emmc_nor_lp",	0x02},
+	{"emmc_nor",	0x02},
+	{"nand_nor",	0x02},
+	{"nor_s",	0x02},
+	{"nor_nor_lp",	0x02},
+	{"nor_nor",	0x02},
+	{NULL,		0}
+};
+
+struct boot_config maaxboard8ulp_board_boot_config[] = {
+	{"fuse",	{0x00}},
+	{"usb",		{0x00}},
+	{"emmc_s",	{0x00}},
+	{"emmc_nor_lp",	{0x01}},
+	{"emmc_nor",	{0x02}},
+	{"nand_nor",	{0x12}},
+	{"nor_s",	{0x20}},
+	{"nor_nor_lp",	{0x21}},
+	{"nor_nor",	{0x22}},
+	{NULL,		{0}}
+};
+//Saka: End
 
 struct boot_mode imx8ulpevk_board_boot_modes[] = {
 	{"fuse",	0x00},
@@ -967,6 +1034,9 @@ struct board_info board_list[] =
 	{"imx8mpevkpwra1",	imx8mpevkpwr_board_a1,	imx8mpevk_board_boot_modes,	0,	NULL,				imx8mpevkpwr_power_groups,	imx8mpevk_board_links,		&imx8mpevkpwr_a1_ftdi_eeprom_user_area_info,	500},
 	{"imx8mpevk",		imx8mpevk_board,	imx8mpevk_board_boot_modes,	0,	NULL,				NULL,				imx8mpevk_board_links,		NULL,						500},
 	{"imx8mpddr4",		imx8mpddr4_board,	null_boot_mode,			0,	NULL,				NULL,				null_board_links,		NULL,						500},
+	//Saka: Adding MaaXBoard 8ULP
+	{"maaxboard8ulp",	maaxboard8ulp_board,	maaxboard8ulp_board_boot_modes,	1,	maaxboard8ulp_board_boot_config,	imx8ulpevkpwr_power_groups,	null_board_links,		&maaxboard8ulp_ftdi_eeprom_user_area_info,		9000},
+	//Saka: End
 	{"imx8ulpevk",		imx8ulpevk_board,	imx8ulpevk_board_boot_modes,	1,	imx8ulpevk_board_boot_config,	imx8ulpevkpwr_power_groups,	null_board_links,		&imx8ulpevk_ftdi_eeprom_user_area_info,		9000},
 	{"imx8ulpevkb2",	imx8ulpevkb2_board,	imx8ulpevk_board_boot_modes,	1,	imx8ulpevk_board_boot_config,	imx8ulpevkpwr_power_groups,	null_board_links,		&imx8ulpevkb2_ftdi_eeprom_user_area_info,	9000},
 	{"imx8ulpevk9",		imx8ulpevk9_board,	imx8ulpevk_board_boot_modes,	1,	imx8ulpevk_board_boot_config,	imx8ulpevkpwr_power_groups,	null_board_links,		&imx8ulpevk9_ftdi_eeprom_user_area_info,	9000},

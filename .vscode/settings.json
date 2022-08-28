@@ -1,0 +1,14 @@
+{
+    "cmake.sourceDirectory": "${workspaceFolder}",
+    "cmake.configureSettings": {
+        "CMAKE_BUILD_TYPE": "debug",
+    },
+    "cmake.configureArgs": [
+        "-GUnix Makefiles",
+        "-DCMAKE_BUILD_TYPE=debug",
+    ],
+    "files.associations": {
+        "unistd.h": "c",
+        "ftdi.h": "c"
+    },
+}

@@ -93,6 +93,11 @@ extern struct ftdi_eeprom_user_area imx8dxlevk_ftdi_eeprom_user_area_info;
 extern struct ftdi_eeprom_user_area imx8dxlevk_c1_ftdi_eeprom_user_area_info;
 extern struct ftdi_eeprom_user_area imx8mpevkpwr_a0_ftdi_eeprom_user_area_info;
 extern struct ftdi_eeprom_user_area imx8mpevkpwr_a1_ftdi_eeprom_user_area_info;
+
+//Saka: Adding MaaXBoard 8ULP
+extern struct ftdi_eeprom_user_area maaxboard8ulp_ftdi_eeprom_user_area_info;
+//Saka: End
+
 extern struct ftdi_eeprom_user_area imx8ulpevk_ftdi_eeprom_user_area_info;
 extern struct ftdi_eeprom_user_area imx8ulpevkb2_ftdi_eeprom_user_area_info;
 extern struct ftdi_eeprom_user_area imx8ulpevk9_ftdi_eeprom_user_area_info;

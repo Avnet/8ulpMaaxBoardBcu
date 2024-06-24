@@ -54,6 +54,9 @@ struct ftdi_eeprom_field_code_tb ftdi_eeprom_field[] = {
 	{ftdi_eeprom_board_id, 0xb, "NXP i.MX8ULP Watch VAL Board"},
 	{ftdi_eeprom_board_id, 0xc, "NXP i.MX93 EVK Board"},
 	{ftdi_eeprom_board_id, 0xd, "NXP VAL_BOARD_3 Board"},
+//Saka: Adding MaaXBoard 8ULP
+	{ftdi_eeprom_board_id, 0xe, "AVNET MaaXBoard8ULP Board"},
+//Saka: End
 
 	{ftdi_eeprom_soc_id, 0x1, "i.MX8DXL"},
 	{ftdi_eeprom_soc_id, 0x2, "i.MX8MP"},
@@ -118,6 +121,17 @@ struct ftdi_eeprom_user_area imx8mpevkpwr_a1_ftdi_eeprom_user_area_info = {
 	27,
 	1
 };
+
+//Saka: Adding MaaXBoard 8ULP
+struct ftdi_eeprom_user_area maaxboard8ulp_ftdi_eeprom_user_area_info = {
+	0x1,
+	0xe, 0x0, 0x0,
+	0x3, 0x0, 0x0,
+	0x4, 0xF, 0xF,
+	15,
+	1
+};
+//Saka: End
 
 struct ftdi_eeprom_user_area imx8ulpevk_ftdi_eeprom_user_area_info = {
 	0x1,

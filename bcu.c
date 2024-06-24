@@ -584,6 +584,9 @@ static void get_gpio_level(struct options_setting* setting)
 
 	status = gpio->gpio_read(gpio, &buff);
 
+	//Saka: 
+	printf("buff = 0x%02X, status = %d\n", buff, status);
+
 	if (status)
 		printf("get gpio failed, error = 0x%x\n", status);
 	else

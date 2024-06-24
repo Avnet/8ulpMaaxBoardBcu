@@ -634,6 +634,7 @@ int ft4232h_i2c_write(void* ft4232h, unsigned char data, int type)
 
 	if (((in_buffer[0] & 0x1) != 0)) //Check ACK bit 0 on data byte read out
 	{
+		//Saka: error caused here
 		// printf("can't get the ACK bit after write\n");
 		return -1; /*Error, can't get the ACK bit */
 	}

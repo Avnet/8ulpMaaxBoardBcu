@@ -1,0 +1,42 @@
+[
+{
+  "directory": "/home/avnet/avnet_bcu/8ulpMaaxBoardBcu/build",
+  "command": "/usr/bin/gcc  -I/usr/include/libusb-1.0 -I/usr/include/libftdi1 -I/usr/include/libusb-1.0include -I/home/avnet/avnet_bcu/8ulpMaaxBoardBcu/libftdi/src -I/home/avnet/avnet_bcu/8ulpMaaxBoardBcu/libcurl/include -I/home/avnet/avnet_bcu/8ulpMaaxBoardBcu  -g   -o CMakeFiles/bcu.dir/bcu.c.o   -c /home/avnet/avnet_bcu/8ulpMaaxBoardBcu/bcu.c",
+  "file": "/home/avnet/avnet_bcu/8ulpMaaxBoardBcu/bcu.c"
+},
+{
+  "directory": "/home/avnet/avnet_bcu/8ulpMaaxBoardBcu/build",
+  "command": "/usr/bin/gcc  -I/usr/include/libusb-1.0 -I/usr/include/libftdi1 -I/usr/include/libusb-1.0include -I/home/avnet/avnet_bcu/8ulpMaaxBoardBcu/libftdi/src -I/home/avnet/avnet_bcu/8ulpMaaxBoardBcu/libcurl/include -I/home/avnet/avnet_bcu/8ulpMaaxBoardBcu  -g   -o CMakeFiles/bcu.dir/port.c.o   -c /home/avnet/avnet_bcu/8ulpMaaxBoardBcu/port.c",
+  "file": "/home/avnet/avnet_bcu/8ulpMaaxBoardBcu/port.c"
+},
+{
+  "directory": "/home/avnet/avnet_bcu/8ulpMaaxBoardBcu/build",
+  "command": "/usr/bin/gcc  -I/usr/include/libusb-1.0 -I/usr/include/libftdi1 -I/usr/include/libusb-1.0include -I/home/avnet/avnet_bcu/8ulpMaaxBoardBcu/libftdi/src -I/home/avnet/avnet_bcu/8ulpMaaxBoardBcu/libcurl/include -I/home/avnet/avnet_bcu/8ulpMaaxBoardBcu  -g   -o CMakeFiles/bcu.dir/chip.c.o   -c /home/avnet/avnet_bcu/8ulpMaaxBoardBcu/chip.c",
+  "file": "/home/avnet/avnet_bcu/8ulpMaaxBoardBcu/chip.c"
+},
+{
+  "directory": "/home/avnet/avnet_bcu/8ulpMaaxBoardBcu/build",
+  "command": "/usr/bin/gcc  -I/usr/include/libusb-1.0 -I/usr/include/libftdi1 -I/usr/include/libusb-1.0include -I/home/avnet/avnet_bcu/8ulpMaaxBoardBcu/libftdi/src -I/home/avnet/avnet_bcu/8ulpMaaxBoardBcu/libcurl/include -I/home/avnet/avnet_bcu/8ulpMaaxBoardBcu  -g   -o CMakeFiles/bcu.dir/board.c.o   -c /home/avnet/avnet_bcu/8ulpMaaxBoardBcu/board.c",
+  "file": "/home/avnet/avnet_bcu/8ulpMaaxBoardBcu/board.c"
+},
+{
+  "directory": "/home/avnet/avnet_bcu/8ulpMaaxBoardBcu/build",
+  "command": "/usr/bin/gcc  -I/usr/include/libusb-1.0 -I/usr/include/libftdi1 -I/usr/include/libusb-1.0include -I/home/avnet/avnet_bcu/8ulpMaaxBoardBcu/libftdi/src -I/home/avnet/avnet_bcu/8ulpMaaxBoardBcu/libcurl/include -I/home/avnet/avnet_bcu/8ulpMaaxBoardBcu  -g   -o CMakeFiles/bcu.dir/bcu_parser.c.o   -c /home/avnet/avnet_bcu/8ulpMaaxBoardBcu/bcu_parser.c",
+  "file": "/home/avnet/avnet_bcu/8ulpMaaxBoardBcu/bcu_parser.c"
+},
+{
+  "directory": "/home/avnet/avnet_bcu/8ulpMaaxBoardBcu/build",
+  "command": "/usr/bin/gcc  -I/usr/include/libusb-1.0 -I/usr/include/libftdi1 -I/usr/include/libusb-1.0include -I/home/avnet/avnet_bcu/8ulpMaaxBoardBcu/libftdi/src -I/home/avnet/avnet_bcu/8ulpMaaxBoardBcu/libcurl/include -I/home/avnet/avnet_bcu/8ulpMaaxBoardBcu  -g   -o CMakeFiles/bcu.dir/bcu_yaml.c.o   -c /home/avnet/avnet_bcu/8ulpMaaxBoardBcu/bcu_yaml.c",
+  "file": "/home/avnet/avnet_bcu/8ulpMaaxBoardBcu/bcu_yaml.c"
+},
+{
+  "directory": "/home/avnet/avnet_bcu/8ulpMaaxBoardBcu/build",
+  "command": "/usr/bin/gcc  -I/usr/include/libusb-1.0 -I/usr/include/libftdi1 -I/usr/include/libusb-1.0include -I/home/avnet/avnet_bcu/8ulpMaaxBoardBcu/libftdi/src -I/home/avnet/avnet_bcu/8ulpMaaxBoardBcu/libcurl/include -I/home/avnet/avnet_bcu/8ulpMaaxBoardBcu  -g   -o CMakeFiles/bcu.dir/bcu_https.c.o   -c /home/avnet/avnet_bcu/8ulpMaaxBoardBcu/bcu_https.c",
+  "file": "/home/avnet/avnet_bcu/8ulpMaaxBoardBcu/bcu_https.c"
+},
+{
+  "directory": "/home/avnet/avnet_bcu/8ulpMaaxBoardBcu/build",
+  "command": "/usr/bin/gcc  -I/usr/include/libusb-1.0 -I/usr/include/libftdi1 -I/usr/include/libusb-1.0include -I/home/avnet/avnet_bcu/8ulpMaaxBoardBcu/libftdi/src -I/home/avnet/avnet_bcu/8ulpMaaxBoardBcu/libcurl/include -I/home/avnet/avnet_bcu/8ulpMaaxBoardBcu  -g   -o CMakeFiles/bcu.dir/bcu_ftdi_eeprom.c.o   -c /home/avnet/avnet_bcu/8ulpMaaxBoardBcu/bcu_ftdi_eeprom.c",
+  "file": "/home/avnet/avnet_bcu/8ulpMaaxBoardBcu/bcu_ftdi_eeprom.c"
+}
+]
